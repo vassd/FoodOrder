@@ -1,0 +1,11 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`CategoryHeader test > should match snapshot 1`] = `
+<div>
+  <div
+    class="_category-header_d36887"
+  >
+    pizza
+  </div>
+</div>
+`;
