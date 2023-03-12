@@ -60,7 +60,6 @@ You can view foods based on categories and also add extra toppings for your liki
 <a name="prerequisites"></a>
 
 * NodeJS [14.20.0](https://nodejs.org/download/release/v14.20.0/) or higher
-* pnpm
 
 ## Installation
 
