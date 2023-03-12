@@ -5,6 +5,7 @@ import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew'
 import Box from '@mui/material/Box'
 import { type MenuItemInterface } from 'components'
 import { RestaurantContext } from 'context'
+import styles from './MenuItemDetails.module.scss'
 
 interface MenuItemDetailsInterface {
   isOpen: boolean
@@ -47,22 +48,17 @@ export const MenuItemDetails: React.FC<MenuItemDetailsInterface> = ({
       container
       direction="row"
       alignItems="center"
-      sx={{ boxShadow: '0px 2px 2px grey', backgroundColor: 'white' }}
+      className={styles['menu-item-details-header']}
     >
       <Grid
         item
         xs={2}
-        sx={{
-          textAlign: 'center',
-          padding: '16px',
-          cursor: 'pointer',
-          borderRight: '2px solid rgb(200, 200, 200)'
-        }}
+        className={styles['menu-item-details-header__close']}
         onClick={handleClick}
       >
         <ArrowBackIosNewIcon fontSize="large" />
       </Grid>
-      <Grid item xs={10} sx={{ padding: '24px' }}>
+      <Grid item xs={10} className={styles['menu-item-details-header__title']}>
         <strong>{item?.name}</strong>
       </Grid>
     </Grid>
@@ -72,20 +68,12 @@ export const MenuItemDetails: React.FC<MenuItemDetailsInterface> = ({
     hasCrust
       ? (
       <section>
-        <Box
-          sx={{
-            padding: '16px 0px'
-          }}
-        >
+        <Box className={styles['menu-item-details__content-title']}>
           <div>Crust (Required)</div>
         </Box>
         {crusts.map((crust: Crust) => (
           <Box
-            sx={{
-              border: '1px solid rgb(180, 180, 180)',
-              backgroundColor: 'white',
-              padding: '16px'
-            }}
+            className={styles['menu-item-details__content-item']}
             key={`${crust.name}_${crust.id}`}
           >
             {crust.name}
@@ -99,33 +87,19 @@ export const MenuItemDetails: React.FC<MenuItemDetailsInterface> = ({
     hasTopping
       ? (
       <section>
-        <Box
-          sx={{
-            padding: '16px 0px'
-          }}
-        >
-          <div>Crust (Required)</div>
+        <Box className={styles['menu-item-details__content-title']}>
+          <div>Extra Toppings</div>
         </Box>
         {toppings.map((topping: Topping) => (
           <Box
-            sx={{
-              border: '1px solid rgb(180, 180, 180)',
-              backgroundColor: 'white',
-              padding: '16px'
-            }}
+            className={styles['menu-item-details__content-item']}
             key={`${topping.name}_${topping.id}`}
           >
             <Grid container direction="row" alignItems="center">
               <Grid item xs={9}>
                 {topping.name}
               </Grid>
-              <Grid
-                item
-                xs={3}
-                sx={{
-                  textAlign: 'right'
-                }}
-              >
+              <Grid item xs={3} textAlign={'right'}>
                 {`+${topping.price}`}
               </Grid>
             </Grid>
@@ -139,7 +113,7 @@ export const MenuItemDetails: React.FC<MenuItemDetailsInterface> = ({
     return (
       <Dialog fullScreen open={isOpen}>
         {renderHeader()}
-        <Box sx={{ padding: '16px' }}>
+        <Box className={styles['menu-item-details__content']}>
           {item.ingredients.length > 0
             ? `(${item.ingredients.join(', ')})`
             : ''}

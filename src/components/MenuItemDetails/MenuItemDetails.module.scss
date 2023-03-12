@@ -1,0 +1,29 @@
+.menu-item-details-header {
+  box-shadow: 0 2px 2px grey;
+}
+
+.menu-item-details-header__close {
+  text-align: center;
+  cursor: pointer;
+  border-right: 2px solid rgb(200, 200, 200)
+}
+
+.menu-item-details-header__title {
+  padding: 24px
+}
+
+.menu-item-details__content, .menu-item-details-header__close, .menu-item-details__content-item {
+  padding: 16px
+}
+
+.menu-item-details__content-title {
+  padding: 16px 0
+}
+
+.menu-item-details__content-item {
+  border: 1px solid rgb(180, 180, 180);
+}
+
+.menu-item-details-header, .menu-item-details__content-item {
+  background-color: white;
+}

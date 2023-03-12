@@ -1,6 +1,7 @@
 import * as React from 'react'
 import Grid from '@mui/material/Grid'
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined'
+import styles from './MenuHeader.module.scss'
 
 interface MenuHeaderInterface {
   name: string
@@ -9,24 +10,15 @@ interface MenuHeaderInterface {
 export const MenuHeader: React.FC<MenuHeaderInterface> = ({ name }) => {
   return (
     <Grid
+      className={styles['menu-header']}
       container
       direction="row"
       alignItems="center"
-      sx={{ boxShadow: '0px 2px 2px grey' }}
     >
-      <Grid item xs={9} md={10} sx={{ padding: '24px' }}>
+      <Grid item xs={9} md={10} className={styles['menu-header__title']}>
         <strong>{name}</strong>
       </Grid>
-      <Grid
-        item
-        xs={3}
-        md={2}
-        sx={{
-          borderLeft: '2px solid rgb(240, 240, 240)',
-          textAlign: 'center',
-          padding: '16px'
-        }}
-      >
+      <Grid item xs={3} md={2} className={styles['menu-header__info']}>
         <InfoOutlinedIcon fontSize="large" />
       </Grid>
     </Grid>

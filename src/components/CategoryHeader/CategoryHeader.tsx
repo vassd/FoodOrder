@@ -1,5 +1,6 @@
 import React from 'react'
 import Box from '@mui/material/Box'
+import styles from './CategoryHeader.module.scss'
 
 export interface Category {
   id: number
@@ -9,17 +10,5 @@ export interface Category {
 }
 
 export const CategoryHeader: React.FC<Category> = ({ name }) => {
-  return (
-    <Box
-      sx={{
-        textTransform: 'uppercase',
-        textAlign: 'center',
-        fontWeight: 'bold',
-        backgroundColor: 'rgb(240, 240, 240)',
-        padding: '20px'
-      }}
-    >
-      {name}
-    </Box>
-  )
+  return <Box className={styles['category-header']}>{name}</Box>
 }

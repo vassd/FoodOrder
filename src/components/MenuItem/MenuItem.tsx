@@ -1,6 +1,7 @@
 import React from 'react'
 import Grid from '@mui/material/Grid'
 import ListItem from '@mui/material/ListItem'
+import styles from './MenuItem.module.scss'
 
 export interface MenuItemInterface {
   name: string
@@ -22,8 +23,8 @@ export const MenuItem: React.FC<MenuItemInterface> = ({
   const renderNameAndIngredients = (): JSX.Element => (
     <>
       <Grid container direction="column" alignItems="left">
-        <Grid item sx={{ fontWeight: 'bold' }}>
-          {name}
+        <Grid item>
+          <strong>{name}</strong>
         </Grid>
         <Grid item>
           {ingredients.length > 0 ? `(${ingredients.join(', ')})` : ''}
@@ -45,24 +46,16 @@ export const MenuItem: React.FC<MenuItemInterface> = ({
         container
         direction="row"
         alignItems="center"
-        sx={{
-          borderBottom: '1px solid rgb(200, 200, 200)',
-          cursor: 'pointer',
-          '&:hover': { opacity: '0.5', backgroundColor: 'rgb(230,230,230)' }
-        }}
+        className={styles['menu-item']}
       >
-        <Grid item xs={9} sx={{ padding: '24px' }}>
-          {renderNameAndIngredients()}
-        </Grid>
         <Grid
           item
-          xs={3}
-          sx={{
-            fontWeight: 'bold',
-            textAlign: 'right',
-            padding: '24px'
-          }}
+          xs={9}
+          className={styles['menu-item__name-ingredients-list']}
         >
+          {renderNameAndIngredients()}
+        </Grid>
+        <Grid item xs={3} className={styles['menu-item__price']}>
           {`${price} ${currency}`}
         </Grid>
       </Grid>
