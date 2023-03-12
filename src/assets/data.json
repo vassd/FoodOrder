@@ -46,11 +46,39 @@
     "categories": [
       {
         "id": 0,
-        "name": "Pizza"
+        "name": "Pizza",
+        "hasToppings": true,
+        "hasCrust": true
       },
       {
         "id": 1,
-        "name": "Pasta"
+        "name": "Pasta",
+        "hasToppings": false,
+        "hasCrust": false
+      }
+    ],
+    "toppings": [
+      {
+        "id": 0,
+        "name": "Corn",
+        "price": 0.7,
+        "currency": "RON"
+      },
+      {
+        "id": 1,
+        "name": "Extra mozzarella",
+        "price": 1.2,
+        "currency": "RON"
+      }
+    ],
+    "crusts": [
+      {
+        "id": 0,
+        "name": "Fluffy"
+      },
+      {
+        "id": 1,
+        "name": "Crispy"
       }
     ]
   }

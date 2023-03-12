@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
   type Category,
   CategoryHeader,
   type MenuItemInterface,
-  MenuItem
+  MenuItem,
+  MenuItemDetails
 } from 'components'
 import List from '@mui/material/List'
 
@@ -15,14 +16,28 @@ export const MenuItems: React.FC<MenuItemsInterface> = ({
   items,
   categories
 }) => {
-  const renderItems = (
-    items: MenuItemInterface[],
-    categories: Category[]
-  ): JSX.Element => (
+  const [isOpen, setIsOpen] = useState(false)
+  const [openedItem, setOpenedItem] = useState<MenuItemInterface>()
+
+  const handleOpen = (name: string): void => {
+    setOpenedItem(items.find((item) => item.name === name))
+    setIsOpen(true)
+  }
+
+  const handleClose = (): void => {
+    setIsOpen(false)
+  }
+
+  const renderItems = (): JSX.Element => (
     <>
       {categories.map((category: Category) => (
         <List disablePadding key={category.id}>
-          <CategoryHeader id={category.id} name={category.name} />
+          <CategoryHeader
+            id={category.id}
+            name={category.name}
+            hasToppings={category.hasToppings}
+            hasCrust={category.hasCrust}
+          />
           {items
             .filter((item) => item.category === category.id)
             .map((item: MenuItemInterface) => (
@@ -33,6 +48,7 @@ export const MenuItems: React.FC<MenuItemsInterface> = ({
                 currency={item.currency}
                 ingredients={item.ingredients}
                 category={item.category}
+                onClick={handleOpen}
               />
             ))}
         </List>
@@ -40,5 +56,14 @@ export const MenuItems: React.FC<MenuItemsInterface> = ({
     </>
   )
 
-  return <>{renderItems(items, categories)}</>
+  return (
+    <>
+      {renderItems()}
+      <MenuItemDetails
+        isOpen={isOpen}
+        item={openedItem}
+        onClose={handleClose}
+      />
+    </>
+  )
 }

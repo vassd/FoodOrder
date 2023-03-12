@@ -7,6 +7,7 @@ import {
   type Category,
   type MenuItemInterface
 } from 'components'
+import { RestaurantContextProvider } from 'context'
 
 export const MenuListView: React.FC = () => {
   const restaurantName: string = data.restaurant.name
@@ -14,15 +15,17 @@ export const MenuListView: React.FC = () => {
   const items: MenuItemInterface[] = data.menu.items
 
   return (
-    <Box
-      component="section"
-      sx={{
-        borderTop: '5px solid rgb(240, 240, 240)',
-        borderBottom: '5px solid rgb(240, 240, 240)'
-      }}
-    >
-      <MenuHeader name={restaurantName} />
-      <MenuItems items={items} categories={categories} />
-    </Box>
+    <RestaurantContextProvider>
+      <Box
+        component="section"
+        sx={{
+          borderTop: '5px solid rgb(240, 240, 240)',
+          borderBottom: '5px solid rgb(240, 240, 240)'
+        }}
+      >
+        <MenuHeader name={restaurantName} />
+        <MenuItems items={items} categories={categories} />
+      </Box>
+    </RestaurantContextProvider>
   )
 }

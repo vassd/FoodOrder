@@ -4,6 +4,8 @@ import Box from '@mui/material/Box'
 export interface Category {
   id: number
   name: string
+  hasToppings: boolean
+  hasCrust: boolean
 }
 
 export const CategoryHeader: React.FC<Category> = ({ name }) => {
