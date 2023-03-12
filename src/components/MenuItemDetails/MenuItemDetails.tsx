@@ -113,7 +113,7 @@ export const MenuItemDetails: React.FC<MenuItemDetailsInterface> = ({
 
   if (item != null) {
     return (
-      <Dialog fullScreen open={isOpen}>
+      <Dialog fullScreen open={isOpen} aria-label={'item-details-dialog'}>
         {renderHeader()}
         <section className={styles['menu-item-details__content']}>
           {item.ingredients.length > 0

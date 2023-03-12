@@ -31,27 +31,29 @@ export const MenuItems: React.FC<MenuItemsInterface> = ({
   const renderItems = (): JSX.Element => (
     <>
       {categories.map((category: Category) => (
-        <List disablePadding key={category.id}>
+        <React.Fragment key={category.id}>
           <CategoryHeader
             id={category.id}
             name={category.name}
             hasToppings={category.hasToppings}
             hasCrust={category.hasCrust}
           />
-          {items
-            .filter((item) => item.category === category.id)
-            .map((item: MenuItemInterface) => (
-              <MenuItem
-                key={`${item.name}_${category.id}`}
-                name={item.name}
-                price={item.price}
-                currency={item.currency}
-                ingredients={item.ingredients}
-                category={item.category}
-                onClick={handleOpen}
-              />
-            ))}
-        </List>
+          <List disablePadding>
+            {items
+              .filter((item) => item.category === category.id)
+              .map((item: MenuItemInterface) => (
+                <MenuItem
+                  key={`${item.name}_${category.id}`}
+                  name={item.name}
+                  price={item.price}
+                  currency={item.currency}
+                  ingredients={item.ingredients}
+                  category={item.category}
+                  onClick={handleOpen}
+                />
+              ))}
+          </List>
+        </React.Fragment>
       ))}
     </>
   )
