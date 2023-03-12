@@ -20,20 +20,18 @@ export const MenuItem: React.FC<MenuItemInterface> = ({
   const renderNameAndIngredients = (
     name: string,
     ingredients: string[]
-  ): JSX.Element => {
-    return (
-      <>
-        <Grid container direction="column" alignItems="left">
-          <Grid item sx={{ fontWeight: 'bold' }}>
-            {name}
-          </Grid>
-          <Grid item>
-            {ingredients.length > 0 ? `(${ingredients.join(', ')})` : ''}
-          </Grid>
+  ): JSX.Element => (
+    <>
+      <Grid container direction="column" alignItems="left">
+        <Grid item sx={{ fontWeight: 'bold' }}>
+          {name}
         </Grid>
-      </>
-    )
-  }
+        <Grid item>
+          {ingredients.length > 0 ? `(${ingredients.join(', ')})` : ''}
+        </Grid>
+      </Grid>
+    </>
+  )
 
   return (
     <ListItem disablePadding>
