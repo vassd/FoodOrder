@@ -1,0 +1,32 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`MenuHeader test > should match snapshot 1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-container _menu-header_e0233c css-1vam7s3-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-9 MuiGrid-grid-md-10 _menu-header__title_e0233c css-1b2f4c9-MuiGrid-root"
+    >
+      <strong>
+        3rd rest
+      </strong>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 MuiGrid-grid-md-2 _menu-header__info_e0233c css-frxywp-MuiGrid-root"
+    >
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeLarge css-tzssek-MuiSvgIcon-root"
+        data-testid="InfoOutlinedIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+`;

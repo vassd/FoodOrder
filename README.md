@@ -46,6 +46,7 @@ You can view foods based on categories and also add extra toppings for your liki
 * **Package Manager:** pnpm
 * **Modern CSS:** CSS Modules
 * **CSS Framework:** Material UI
+* **Testing:** Vitest
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -6,7 +6,6 @@ import styles from './MenuItem.module.scss'
 export interface MenuItemInterface {
   name: string
   price: number
-
   currency: string
   ingredients: string[]
   category: number
