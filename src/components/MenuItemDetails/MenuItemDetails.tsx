@@ -2,7 +2,6 @@ import React, { useContext } from 'react'
 import Dialog from '@mui/material/Dialog'
 import Grid from '@mui/material/Grid'
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew'
-import Box from '@mui/material/Box'
 import { type MenuItemInterface } from 'components'
 import { RestaurantContext } from 'context'
 import styles from './MenuItemDetails.module.scss'
@@ -46,7 +45,6 @@ export const MenuItemDetails: React.FC<MenuItemDetailsInterface> = ({
   const renderHeader = (): JSX.Element => (
     <Grid
       container
-      direction="row"
       alignItems="center"
       className={styles['menu-item-details-header']}
     >
@@ -68,17 +66,19 @@ export const MenuItemDetails: React.FC<MenuItemDetailsInterface> = ({
     hasCrust
       ? (
       <section>
-        <Box className={styles['menu-item-details__content-title']}>
-          <div>Crust (Required)</div>
-        </Box>
-        {crusts.map((crust: Crust) => (
-          <Box
-            className={styles['menu-item-details__content-item']}
-            key={`${crust.name}_${crust.id}`}
-          >
-            {crust.name}
-          </Box>
-        ))}
+        <div className={styles['menu-item-details__content-title']}>
+          Crust (Required)
+        </div>
+        <ul className={styles['menu-item-details__content-list']}>
+          {crusts.map((crust: Crust) => (
+            <li
+              className={styles['menu-item-details__content-item']}
+              key={`${crust.name}_${crust.id}`}
+            >
+              {crust.name}
+            </li>
+          ))}
+        </ul>
       </section>
         )
       : null
@@ -87,24 +87,26 @@ export const MenuItemDetails: React.FC<MenuItemDetailsInterface> = ({
     hasTopping
       ? (
       <section>
-        <Box className={styles['menu-item-details__content-title']}>
-          <div>Extra Toppings</div>
-        </Box>
-        {toppings.map((topping: Topping) => (
-          <Box
-            className={styles['menu-item-details__content-item']}
-            key={`${topping.name}_${topping.id}`}
-          >
-            <Grid container direction="row" alignItems="center">
-              <Grid item xs={9}>
-                {topping.name}
+        <div className={styles['menu-item-details__content-title']}>
+          Extra Toppings
+        </div>
+        <ul className={styles['menu-item-details__content-list']}>
+          {toppings.map((topping: Topping) => (
+            <li
+              className={styles['menu-item-details__content-item']}
+              key={`${topping.name}_${topping.id}`}
+            >
+              <Grid container direction="row" alignItems="center">
+                <Grid item xs={9}>
+                  {topping.name}
+                </Grid>
+                <Grid item xs={3} textAlign={'right'}>
+                  {`+${topping.price}`}
+                </Grid>
               </Grid>
-              <Grid item xs={3} textAlign={'right'}>
-                {`+${topping.price}`}
-              </Grid>
-            </Grid>
-          </Box>
-        ))}
+            </li>
+          ))}
+        </ul>
       </section>
         )
       : null
@@ -113,13 +115,13 @@ export const MenuItemDetails: React.FC<MenuItemDetailsInterface> = ({
     return (
       <Dialog fullScreen open={isOpen}>
         {renderHeader()}
-        <Box className={styles['menu-item-details__content']}>
+        <section className={styles['menu-item-details__content']}>
           {item.ingredients.length > 0
             ? `(${item.ingredients.join(', ')})`
             : ''}
           {renderCrust()}
           {renderTopping()}
-        </Box>
+        </section>
       </Dialog>
     )
   } else return null

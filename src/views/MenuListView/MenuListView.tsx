@@ -1,5 +1,4 @@
 import React from 'react'
-import Box from '@mui/material/Box'
 import data from 'assets/data.json'
 import {
   MenuHeader,
@@ -17,10 +16,10 @@ export const MenuListView: React.FC = () => {
 
   return (
     <RestaurantContextProvider>
-      <Box className={styles['menu-list-view']} component="section">
+      <section className={styles['menu-list-view']}>
         <MenuHeader name={restaurantName} />
         <MenuItems items={items} categories={categories} />
-      </Box>
+      </section>
     </RestaurantContextProvider>
   )
 }

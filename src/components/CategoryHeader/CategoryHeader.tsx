@@ -1,5 +1,4 @@
 import React from 'react'
-import Box from '@mui/material/Box'
 import styles from './CategoryHeader.module.scss'
 
 export interface Category {
@@ -10,5 +9,5 @@ export interface Category {
 }
 
 export const CategoryHeader: React.FC<Category> = ({ name }) => {
-  return <Box className={styles['category-header']}>{name}</Box>
+  return <div className={styles['category-header']}>{name}</div>
 }

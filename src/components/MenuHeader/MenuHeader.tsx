@@ -9,12 +9,7 @@ interface MenuHeaderInterface {
 
 export const MenuHeader: React.FC<MenuHeaderInterface> = ({ name }) => {
   return (
-    <Grid
-      className={styles['menu-header']}
-      container
-      direction="row"
-      alignItems="center"
-    >
+    <Grid className={styles['menu-header']} container alignItems="center">
       <Grid item xs={9} md={10} className={styles['menu-header__title']}>
         <strong>{name}</strong>
       </Grid>
