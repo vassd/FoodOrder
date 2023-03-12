@@ -52,6 +52,7 @@ export const MenuItemDetails: React.FC<MenuItemDetailsInterface> = ({
         item
         xs={2}
         className={styles['menu-item-details-header__close']}
+        aria-label={'close dialog'}
         onClick={handleClick}
       >
         <ArrowBackIosNewIcon fontSize="large" />

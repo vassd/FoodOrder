@@ -1,0 +1,154 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`MenuItems test > should match snapshot 1`] = `
+<div>
+  <div
+    class="_category-header_d36887"
+  >
+    Pizza
+  </div>
+  <ul
+    class="MuiList-root css-1mk9mw3-MuiList-root"
+  >
+    <li
+      class="MuiListItem-root MuiListItem-gutters css-1nxmd3h-MuiListItem-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container _menu-item_9fa3c5 css-1vam7s3-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-9 _menu-item__name-ingredients-list_9fa3c5 css-1qpzhgb-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-b3ynvt-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+            >
+              <strong>
+                Pizza Margherita
+              </strong>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+            >
+              (tomato sauce, cheese)
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 _menu-item__price_9fa3c5 css-1equabv-MuiGrid-root"
+        >
+          7 RON
+        </div>
+      </div>
+    </li>
+    <li
+      class="MuiListItem-root MuiListItem-gutters css-1nxmd3h-MuiListItem-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container _menu-item_9fa3c5 css-1vam7s3-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-9 _menu-item__name-ingredients-list_9fa3c5 css-1qpzhgb-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-b3ynvt-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+            >
+              <strong>
+                Pizza Prosciutto
+              </strong>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+            >
+              (tomato sauce, cheese, ham)
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 _menu-item__price_9fa3c5 css-1equabv-MuiGrid-root"
+        >
+          10 RON
+        </div>
+      </div>
+    </li>
+  </ul>
+  <div
+    class="_category-header_d36887"
+  >
+    Pasta
+  </div>
+  <ul
+    class="MuiList-root css-1mk9mw3-MuiList-root"
+  >
+    <li
+      class="MuiListItem-root MuiListItem-gutters css-1nxmd3h-MuiListItem-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container _menu-item_9fa3c5 css-1vam7s3-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-9 _menu-item__name-ingredients-list_9fa3c5 css-1qpzhgb-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-b3ynvt-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+            >
+              <strong>
+                Spaghetti Bolognese
+              </strong>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+            />
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 _menu-item__price_9fa3c5 css-1equabv-MuiGrid-root"
+        >
+          9 RON
+        </div>
+      </div>
+    </li>
+    <li
+      class="MuiListItem-root MuiListItem-gutters css-1nxmd3h-MuiListItem-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container _menu-item_9fa3c5 css-1vam7s3-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-9 _menu-item__name-ingredients-list_9fa3c5 css-1qpzhgb-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-direction-xs-column css-b3ynvt-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+            >
+              <strong>
+                Spaghetti Frutti di Mare
+              </strong>
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root"
+            >
+              (with sea food)
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-3 _menu-item__price_9fa3c5 css-1equabv-MuiGrid-root"
+        >
+          12 RON
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+`;
