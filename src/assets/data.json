@@ -7,6 +7,7 @@
       {
         "name": "Pizza Margherita",
         "price": 7.00,
+        "currency": "RON",
         "ingredients": [
           "tomato sauce",
           "cheese"
@@ -16,6 +17,7 @@
       {
         "name": "Pizza Prosciutto",
         "price": 10.00,
+        "currency": "RON",
         "ingredients": [
           "tomato sauce",
           "cheese",
@@ -26,6 +28,7 @@
       {
         "name": "Spaghetti Bolognese",
         "price": 9.00,
+        "currency": "RON",
         "ingredients": [
         ],
         "category": 1
@@ -33,10 +36,11 @@
       {
         "name": "Spaghetti Frutti di Mare",
         "price": 12.00,
+        "currency": "RON",
         "ingredients": [
           "with sea food"
         ],
-        "category": 0
+        "category": 1
       }
     ],
     "categories": [

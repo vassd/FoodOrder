@@ -1,16 +1,28 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Box from '@mui/material/Box'
 import data from 'assets/data.json'
-import { MenuHeader } from 'components'
+import {
+  MenuHeader,
+  MenuItems,
+  type Category,
+  type MenuItemInterface
+} from 'components'
 
 export const MenuListView: React.FC = () => {
-  const [menu, setMenu] = useState(data)
-  const restaurantName: string = data.restaurant.name;
-
+  const restaurantName: string = data.restaurant.name
+  const categories: Category[] = data.menu.categories
+  const items: MenuItemInterface[] = data.menu.items
 
   return (
-    <Box component="section" sx={{ border: '5px solid rgb(240, 240, 240)' }}>
+    <Box
+      component="section"
+      sx={{
+        borderTop: '5px solid rgb(240, 240, 240)',
+        borderBottom: '5px solid rgb(240, 240, 240)'
+      }}
+    >
       <MenuHeader name={restaurantName} />
+      <MenuItems items={items} categories={categories} />
     </Box>
   )
 }

@@ -14,19 +14,20 @@ export const MenuHeader: React.FC<MenuHeaderInterface> = ({ name }) => {
       alignItems="center"
       sx={{ boxShadow: '0px 2px 2px grey' }}
     >
-      <Grid item xs={10} sx={{ padding: '24px' }}>
+      <Grid item xs={9} md={10} sx={{ padding: '24px' }}>
         <strong>{name}</strong>
       </Grid>
       <Grid
         item
-        xs={2}
+        xs={3}
+        md={2}
         sx={{
           borderLeft: '2px solid rgb(240, 240, 240)',
           textAlign: 'center',
           padding: '16px'
         }}
       >
-        <InfoOutlinedIcon fontSize='large'/>
+        <InfoOutlinedIcon fontSize="large" />
       </Grid>
     </Grid>
   )
