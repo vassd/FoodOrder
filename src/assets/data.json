@@ -1,0 +1,53 @@
+{
+  "restaurant": {
+    "name": "3rd rest"
+  },
+  "menu": {
+    "items": [
+      {
+        "name": "Pizza Margherita",
+        "price": 7.00,
+        "ingredients": [
+          "tomato sauce",
+          "cheese"
+        ],
+        "category": 0
+      },
+      {
+        "name": "Pizza Prosciutto",
+        "price": 10.00,
+        "ingredients": [
+          "tomato sauce",
+          "cheese",
+          "ham"
+        ],
+        "category": 0
+      },
+      {
+        "name": "Spaghetti Bolognese",
+        "price": 9.00,
+        "ingredients": [
+        ],
+        "category": 1
+      },
+      {
+        "name": "Spaghetti Frutti di Mare",
+        "price": 12.00,
+        "ingredients": [
+          "with sea food"
+        ],
+        "category": 0
+      }
+    ],
+    "categories": [
+      {
+        "id": 0,
+        "name": "Pizza"
+      },
+      {
+        "id": 1,
+        "name": "Pasta"
+      }
+    ]
+  }
+}

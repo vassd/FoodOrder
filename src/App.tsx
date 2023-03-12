@@ -1,13 +1,8 @@
 import React from 'react'
+import { MenuListView } from 'views'
 
 function App (): JSX.Element {
-  return (
-    <div className="App">
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+  return <MenuListView />
 }
 
 export default App
